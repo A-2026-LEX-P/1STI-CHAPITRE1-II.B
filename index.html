@@ -1,0 +1,543 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Parcours interactif d'histoire : de la Première République à l'Empire, 1792-1804.">
+  <title>Mission Histoire | République et Empire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <div class="hero-content">
+    <span class="eyebrow">PARCOURS HISTORIQUE INTERACTIF</span>
+    <h1>MISSION HISTOIRE</h1>
+    <p class="hero-subtitle">De la République à l'Empire</p>
+    <p class="hero-date">1792 — 1804</p>
+    <a href="#parcours" class="hero-link">Commencer le parcours ↓</a>
+  </div>
+</header>
+
+<main class="container">
+
+<section class="card introduction">
+  <span class="tag">VOTRE MISSION</span>
+  <h2>Bienvenue dans votre parcours historique !</h2>
+  <p>
+    Entre 1792 et 1804, la France connaît de profonds bouleversements.
+    La Première République traverse plusieurs crises avant que
+    Napoléon Bonaparte ne prenne le pouvoir et ne fonde l'Empire.
+  </p>
+  <div class="highlight">
+    <strong>Problématique :</strong>
+    Comment la République française, née en 1792, traverse-t-elle
+    plusieurs crises avant de devenir un Empire dirigé par Napoléon ?
+  </div>
+  <p>Parcourez les cinq modules, observez les œuvres et répondez
+  aux questions pour vérifier votre compréhension.</p>
+  <p class="small">Vous pouvez revenir librement sur les modules précédents.</p>
+</section>
+
+<section class="card" id="parcours">
+  <div class="progress-heading">
+    <h2>Votre progression</h2>
+    <span id="progressText">0 / 5 modules</span>
+  </div>
+  <div class="progress-track">
+    <div id="progressBar"></div>
+  </div>
+  <p class="small" id="progressMessage">Votre parcours commence ici.</p>
+</section>
+
+<nav class="module-menu" aria-label="Navigation des modules">
+  <button class="module-btn active" data-target="0">01 · République</button>
+  <button class="module-btn" data-target="1">02 · Terreur</button>
+  <button class="module-btn" data-target="2">03 · Directoire</button>
+  <button class="module-btn" data-target="3">04 · Brumaire</button>
+  <button class="module-btn" data-target="4">05 · Empire</button>
+</nav>
+
+<div id="modules">
+
+<section class="module card" data-module="0">
+  <span class="tag">MODULE 1 · 1792-1793</span>
+  <h2>Une République divisée</h2>
+
+  <h3>1. La naissance de la République</h3>
+  <p>
+    En septembre 1792, la Convention nationale proclame la
+    Première République. La monarchie est abolie et le pouvoir
+    n'appartient désormais plus à un roi.
+  </p>
+  <p>
+    Le calendrier révolutionnaire est instauré : les actes publics
+    doivent désormais être datés de l'an I de la République.
+  </p>
+
+  <div class="highlight">
+    <strong>À retenir :</strong>
+    République : régime politique dans lequel le pouvoir n'appartient
+    pas à un roi, mais à des dirigeants élus.
+  </div>
+
+  <h3>2. Trois groupes politiques à la Convention</h3>
+  <div class="political-grid">
+    <article class="political-card girondin">
+      <h4>Les Girondins</h4>
+      <p>Républicains modérés.</p>
+      <button class="action explain-btn" data-group="girondins">Découvrir</button>
+    </article>
+    <article class="political-card montagnard">
+      <h4>Les Montagnards</h4>
+      <p>Républicains radicaux.</p>
+      <button class="action explain-btn" data-group="montagnards">Découvrir</button>
+    </article>
+    <article class="political-card plaine">
+      <h4>La Plaine</h4>
+      <p>Députés du centre.</p>
+      <button class="action explain-btn" data-group="plaine">Découvrir</button>
+    </article>
+  </div>
+  <div id="groupExplanation" class="feedback info">
+    Sélectionnez un groupe pour découvrir ses idées.
+  </div>
+
+  <h3>3. Document historique : Lanjuinais</h3>
+  <figure class="artwork">
+    <img src="images/lanjuinais.jpg"
+         alt="Portrait de Jean-Denis Lanjuinais"
+         loading="lazy">
+    <figcaption>
+      Portrait de Jean-Denis Lanjuinais, gravure éditée par
+      François Bonneville, vers 1793-1794.
+      <a href="https://musees-reims.fr/oeuvre/portrait-de-jean-denis-lanjuinais"
+         target="_blank" rel="noopener">Consulter la notice du musée</a>.
+    </figcaption>
+  </figure>
+  <div class="highlight">
+    <strong>Observez :</strong>
+    Lanjuinais est un député girondin. Son parcours permet
+    d'aborder les divisions politiques de la Convention.
+  </div>
+
+  <h3>4. Vérifiez votre compréhension</h3>
+  <div class="quiz" data-quiz="module1">
+    <div class="question" data-answer="b"
+         data-correction="Les Girondins souhaitent notamment limiter l'influence politique de Paris et défendre le poids des départements.">
+      <p>1. Quel groupe souhaite limiter l'influence politique de Paris ?</p>
+      <label><input type="radio" name="m1q1" value="a"> Les Montagnards</label>
+      <label><input type="radio" name="m1q1" value="b"> Les Girondins</label>
+      <label><input type="radio" name="m1q1" value="c"> La Plaine</label>
+    </div>
+    <div class="question" data-answer="b"
+         data-correction="La Plaine peut faire basculer les votes en soutenant tantôt les Girondins, tantôt les Montagnards.">
+      <p>2. Pourquoi la Plaine est-elle importante ?</p>
+      <label><input type="radio" name="m1q2" value="a"> Elle commande l'armée.</label>
+      <label><input type="radio" name="m1q2" value="b"> Elle peut faire basculer les votes.</label>
+      <label><input type="radio" name="m1q2" value="c"> Elle rétablit le roi.</label>
+    </div>
+    <div class="question" data-answer="a"
+         data-correction="Les Montagnards sont notamment soutenus par les sans-culottes, issus des milieux populaires parisiens.">
+      <p>3. Qui soutient particulièrement les Montagnards ?</p>
+      <label><input type="radio" name="m1q3" value="a"> Les sans-culottes</label>
+      <label><input type="radio" name="m1q3" value="b"> Les nobles émigrés</label>
+      <label><input type="radio" name="m1q3" value="c"> Les monarchies européennes</label>
+    </div>
+    <button class="action correction-btn">Corriger mes réponses</button>
+    <div class="quiz-result" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="module card hidden" data-module="1">
+  <span class="tag">MODULE 2 · 1793-1794</span>
+  <h2>La Terreur : une République menacée</h2>
+
+  <h3>1. Une République en danger</h3>
+  <p>
+    En 1793, la République est encore fragile. Elle doit faire face
+    à deux grandes menaces.
+  </p>
+  <div class="political-grid">
+    <article class="political-card girondin">
+      <h4>Menaces extérieures</h4>
+      <p>Les monarchies européennes font la guerre à la France révolutionnaire.</p>
+    </article>
+    <article class="political-card montagnard">
+      <h4>Menaces intérieures</h4>
+      <p>Des Français se soulèvent contre la République, notamment en Vendée.</p>
+    </article>
+  </div>
+
+  <h3>2. La mise en place de la Terreur</h3>
+  <p>
+    Les Montagnards considèrent que la République doit être défendue
+    contre ses ennemis. Ils mettent en place un gouvernement
+    révolutionnaire et une politique exceptionnelle : la Terreur.
+  </p>
+  <ul>
+    <li><strong>La répression :</strong> les suspects sont arrêtés,
+    jugés et parfois exécutés.</li>
+    <li><strong>La construction d'une société républicaine :</strong>
+    nouvelles fêtes, nouveaux symboles et développement d'une
+    culture politique destinée à apprendre le métier de citoyen.</li>
+  </ul>
+  <p>Robespierre devient l'une des principales figures de cette période.</p>
+
+  <div class="highlight">
+    <strong>À retenir :</strong>
+    La Terreur n'est pas seulement une période d'exécutions.
+    C'est une politique menée au nom de la défense de la République,
+    qui associe répression et transformation de la société.
+  </div>
+
+  <h3>3. Document : le portrait de Robespierre</h3>
+  <figure class="artwork">
+    <img src="images/robespierre.jpg"
+         alt="Portrait de Maximilien de Robespierre"
+         loading="lazy">
+    <figcaption>
+      Portrait de Maximilien de Robespierre, peintre anonyme,
+      vers 1790, musée Carnavalet.
+      <a href="https://www.parismuseescollections.paris.fr/fr/musee-carnavalet/oeuvres/portrait-de-maximilien-de-robespierre-1758-1794-homme-politique"
+         target="_blank" rel="noopener">Notice du musée</a>.
+    </figcaption>
+  </figure>
+  <p class="small">Observez le portrait et identifiez le personnage.
+  Ce document ne comporte pas de questionnaire.</p>
+
+  <h3>4. La chute de Robespierre : 9 Thermidor</h3>
+  <p>
+    Progressivement, la Terreur devient de plus en plus violente.
+    De nombreux députés craignent d'être eux-mêmes arrêtés.
+    Robespierre est de plus en plus isolé politiquement.
+  </p>
+  <p>
+    Le 27 juillet 1794 (9 thermidor an II), ses opposants le font
+    arrêter. Il est guillotiné le lendemain, le 28 juillet.
+    La Terreur prend fin.
+  </p>
+
+  <figure class="artwork">
+    <img src="images/chute-thermidor.jpg"
+         alt="Scène représentant la chute de Robespierre le 9 Thermidor"
+         loading="lazy">
+    <figcaption>
+      Séance du 9 Thermidor, Raymond-Quinsac Monvoisin,
+      vers 1837, musée de la Révolution française.
+      <a href="https://histoire-image.org/etudes/seance-9-thermidor"
+         target="_blank" rel="noopener">Notice et analyse de l'œuvre</a>.
+    </figcaption>
+  </figure>
+
+  <div class="highlight">
+    <strong>Question d'observation :</strong>
+    Comment cette scène représente-t-elle la chute de Robespierre
+    et les divisions politiques de la Convention ?
+  </div>
+
+  <div class="quiz" data-quiz="module2">
+    <div class="question" data-answer="b"
+         data-correction="La République affronte les monarchies européennes et des révoltes intérieures, notamment en Vendée.">
+      <p>1. Pourquoi la République est-elle menacée en 1793 ?</p>
+      <label><input type="radio" name="m2q1" value="a"> Parce que la France est en paix.</label>
+      <label><input type="radio" name="m2q1" value="b"> Par des ennemis extérieurs et intérieurs.</label>
+      <label><input type="radio" name="m2q1" value="c"> Parce que Napoléon est empereur.</label>
+    </div>
+    <div class="question" data-answer="a"
+         data-correction="La Terreur comprend notamment l'arrestation, le jugement et l'exécution de suspects considérés comme ennemis de la République.">
+      <p>2. Quelle est une caractéristique de la Terreur ?</p>
+      <label><input type="radio" name="m2q2" value="a"> La répression des ennemis supposés.</label>
+      <label><input type="radio" name="m2q2" value="b"> Le retour du roi.</label>
+      <label><input type="radio" name="m2q2" value="c"> La suppression de l'armée.</label>
+    </div>
+    <div class="question" data-answer="c"
+         data-correction="Robespierre est guillotiné le 28 juillet 1794, après son arrestation la veille.">
+      <p>3. Quand Robespierre est-il guillotiné ?</p>
+      <label><input type="radio" name="m2q3" value="a"> En 1792</label>
+      <label><input type="radio" name="m2q3" value="b"> En 1799</label>
+      <label><input type="radio" name="m2q3" value="c"> Le 28 juillet 1794</label>
+    </div>
+    <button class="action correction-btn">Corriger mes réponses</button>
+    <div class="quiz-result" aria-live="polite"></div>
+  </div>
+
+  <h3>5. La République et la démocratie</h3>
+  <p>
+    La Constitution de 1793 est adoptée par référendum. Elle prévoit
+    notamment le suffrage universel masculin et le droit à l'insurrection
+    contre un pouvoir tyrannique.
+  </p>
+  <p>
+    Le 4 février 1794, la Convention abolit l'esclavage dans les colonies
+    françaises. Les droits proclamés par la Révolution sont ainsi étendus
+    aux personnes réduites en esclavage.
+  </p>
+  <p>
+    Cependant, cette Constitution n'est jamais appliquée :
+    le gouvernement révolutionnaire suspend son application
+    jusqu'au retour de la paix.
+  </p>
+  <div class="highlight">
+    <strong>Démocratie :</strong> régime politique dans lequel le pouvoir
+    est exercé par le peuple.
+  </div>
+</section>
+
+<section class="module card hidden" data-module="2">
+  <span class="tag">MODULE 3 · 1794-1799</span>
+  <h2>Le Directoire : une République instable</h2>
+
+  <h3>1. Après Thermidor</h3>
+  <p>
+    Après la chute de Robespierre, les députés thermidoriens
+    cherchent à mettre fin au gouvernement révolutionnaire
+    et à éviter une nouvelle concentration des pouvoirs.
+  </p>
+  <p>
+    En 1795, une nouvelle Constitution met en place le Directoire.
+  </p>
+
+  <figure class="artwork">
+    <img src="images/barras.jpg"
+         alt="Portrait de Paul Barras"
+         loading="lazy">
+    <figcaption>
+      Portrait de Paul Barras, figure politique du Directoire.
+      <span>Œuvre et attribution à compléter selon la reproduction choisie.</span>
+    </figcaption>
+  </figure>
+
+  <h3>2. Comment fonctionne le Directoire ?</h3>
+  <div class="highlight">
+    <p><strong>Le pouvoir exécutif :</strong> cinq Directeurs.</p>
+    <p><strong>Le pouvoir législatif :</strong> deux assemblées.</p>
+    <ul>
+      <li>Le Conseil des Cinq-Cents propose les lois.</li>
+      <li>Le Conseil des Anciens les adopte ou les rejette.</li>
+    </ul>
+  </div>
+  <p>
+    Ce système cherche à empêcher qu'un seul homme ou qu'un seul
+    groupe puisse concentrer tous les pouvoirs.
+  </p>
+
+  <h3>3. Les difficultés du régime</h3>
+  <ul>
+    <li>Une forte instabilité politique.</li>
+    <li>Des difficultés économiques.</li>
+    <li>Des oppositions entre les différentes tendances politiques.</li>
+  </ul>
+  <p>La République reste fragile.</p>
+
+  <div class="quiz" data-quiz="module3">
+    <div class="question" data-answer="a"
+         data-correction="Le partage des pouvoirs vise à éviter qu'un seul homme ou groupe concentre toute l'autorité.">
+      <p>1. Pourquoi le pouvoir est-il partagé ?</p>
+      <label><input type="radio" name="m3q1" value="a"> Pour éviter une nouvelle concentration des pouvoirs.</label>
+      <label><input type="radio" name="m3q1" value="b"> Pour rétablir la monarchie.</label>
+      <label><input type="radio" name="m3q1" value="c"> Pour supprimer les assemblées.</label>
+    </div>
+    <div class="question" data-answer="b"
+         data-correction="Le pouvoir exécutif est confié à cinq Directeurs.">
+      <p>2. Combien de Directeurs exercent le pouvoir exécutif ?</p>
+      <label><input type="radio" name="m3q2" value="a"> Deux</label>
+      <label><input type="radio" name="m3q2" value="b"> Cinq</label>
+      <label><input type="radio" name="m3q2" value="c"> Dix</label>
+    </div>
+    <div class="question" data-answer="c"
+         data-correction="Le Directoire est marqué par l'instabilité politique et les difficultés économiques.">
+      <p>3. Quelle difficulté caractérise le Directoire ?</p>
+      <label><input type="radio" name="m3q3" value="a"> Une stabilité parfaite.</label>
+      <label><input type="radio" name="m3q3" value="b"> La disparition de l'armée.</label>
+      <label><input type="radio" name="m3q3" value="c"> Une forte instabilité politique.</label>
+    </div>
+    <button class="action correction-btn">Corriger mes réponses</button>
+    <div class="quiz-result" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="module card hidden" data-module="3">
+  <span class="tag">MODULE 4 · 1799</span>
+  <h2>Le coup d'État du 18 Brumaire</h2>
+
+  <h3>1. L'ascension de Napoléon Bonaparte</h3>
+  <p>
+    Napoléon Bonaparte est un général qui connaît de nombreux succès
+    militaires. Il devient populaire dans une France marquée
+    par les difficultés du Directoire.
+  </p>
+  <p>
+    Des responsables politiques souhaitent s'appuyer sur lui
+    pour changer le régime.
+  </p>
+
+  <h3>2. Le coup d'État</h3>
+  <figure class="artwork">
+    <img src="images/brumaire.jpg"
+         alt="Bonaparte au Conseil des Cinq-Cents à Saint-Cloud"
+         loading="lazy">
+    <figcaption>
+      François Bouchot, Le général Bonaparte au Conseil des
+      Cinq-Cents à Saint-Cloud, 10 novembre 1799, 1840.
+      <a href="https://www.napoleon.org/enseignants/documents/48408/"
+         target="_blank" rel="noopener">Notice et analyse historique</a>.
+    </figcaption>
+  </figure>
+
+  <p>
+    Les 18 et 19 brumaire an VIII (9 et 10 novembre 1799),
+    Napoléon fait intervenir l'armée. Le Directoire est renversé.
+  </p>
+  <div class="highlight">
+    <strong>Coup d'État :</strong> prise du pouvoir de manière illégale,
+    généralement par la force.
+  </div>
+  <p>
+    Un nouveau régime est instauré : le Consulat. Napoléon devient
+    Premier consul et renforce progressivement son pouvoir personnel.
+  </p>
+
+  <h3>3. Les premières réformes du Consulat</h3>
+  <ul>
+    <li>1800 : création des préfets.</li>
+    <li>1802 : création des lycées.</li>
+  </ul>
+
+  <div class="quiz" data-quiz="module4">
+    <div class="question" data-answer="a"
+         data-correction="Ses succès militaires contribuent à sa popularité.">
+      <p>1. Pourquoi Napoléon est-il populaire ?</p>
+      <label><input type="radio" name="m4q1" value="a"> Grâce à ses succès militaires.</label>
+      <label><input type="radio" name="m4q1" value="b"> Parce qu'il est déjà roi.</label>
+      <label><input type="radio" name="m4q1" value="c"> Parce qu'il dirige le Directoire depuis 1795.</label>
+    </div>
+    <div class="question" data-answer="b"
+         data-correction="Le coup d'État des 18 et 19 brumaire se déroule les 9 et 10 novembre 1799.">
+      <p>2. Quel événement se déroule en novembre 1799 ?</p>
+      <label><input type="radio" name="m4q2" value="a"> Le sacre de Napoléon.</label>
+      <label><input type="radio" name="m4q2" value="b"> Le coup d'État de Brumaire.</label>
+      <label><input type="radio" name="m4q2" value="c"> La proclamation de la République.</label>
+    </div>
+    <div class="question" data-answer="c"
+         data-correction="Le Consulat succède au Directoire. Napoléon devient Premier consul.">
+      <p>3. Quel régime succède au Directoire ?</p>
+      <label><input type="radio" name="m4q3" value="a"> La monarchie constitutionnelle.</label>
+      <label><input type="radio" name="m4q3" value="b"> Le Directoire.</label>
+      <label><input type="radio" name="m4q3" value="c"> Le Consulat.</label>
+    </div>
+    <button class="action correction-btn">Corriger mes réponses</button>
+    <div class="quiz-result" aria-live="polite"></div>
+  </div>
+</section>
+
+<section class="module card hidden" data-module="4">
+  <span class="tag">MODULE 5 · 1804</span>
+  <h2>De la République à l'Empire</h2>
+
+  <h3>1. Le sacre de Napoléon</h3>
+  <p>
+    Le 2 décembre 1804, Napoléon transforme le Consulat en Empire
+    et devient empereur des Français.
+  </p>
+
+  <figure class="artwork">
+    <img src="images/sacre.jpg"
+         alt="Le Sacre de Napoléon par Jacques-Louis David"
+         loading="lazy">
+    <figcaption>
+      Jacques-Louis David, Le Sacre de Napoléon,
+      1805-1807, musée du Louvre.
+      <a href="https://commons.wikimedia.org/wiki/File:Jacques-Louis_David_Sacre.jpg"
+         target="_blank" rel="noopener">Voir l'œuvre et ses informations</a>.
+    </figcaption>
+  </figure>
+
+  <p>
+    La cérémonie rappelle les couronnements monarchiques.
+    Elle renforce symboliquement l'autorité personnelle de Napoléon.
+  </p>
+
+  <h3>2. Une rupture avec la Révolution</h3>
+  <p>
+    La République laisse place à un Empire héréditaire.
+    Napoléon concentre les pouvoirs entre ses mains.
+  </p>
+  <p>
+    Il affirme cependant gouverner en héritier de la Révolution
+    et conserve certains de ses acquis, notamment l'égalité civile.
+  </p>
+  <div class="warning">
+    <strong>Une contradiction :</strong>
+    Napoléon conserve certains acquis révolutionnaires, mais rétablit
+    l'esclavage dans les colonies françaises en 1802.
+  </div>
+
+  <h3>3. La chronologie à retenir</h3>
+  <div class="timeline">
+    <div><strong>1793-1794</strong><p>La Terreur</p></div>
+    <div><strong>28 juillet 1794</strong><p>Exécution de Robespierre</p></div>
+    <div><strong>1795-1799</strong><p>Le Directoire</p></div>
+    <div><strong>9-10 novembre 1799</strong><p>Coup d'État de Brumaire</p></div>
+    <div><strong>1799-1804</strong><p>Le Consulat</p></div>
+    <div><strong>2 décembre 1804</strong><p>Sacre de Napoléon</p></div>
+  </div>
+
+  <h3>4. Le bilan de votre parcours</h3>
+  <p>Répondez aux cinq questions finales pour vérifier vos connaissances.</p>
+
+  <div class="quiz" data-quiz="module5">
+    <div class="question" data-answer="b"
+         data-correction="La Première République est proclamée en septembre 1792.">
+      <p>1. En quelle année la République est-elle proclamée ?</p>
+      <label><input type="radio" name="m5q1" value="a"> 1789</label>
+      <label><input type="radio" name="m5q1" value="b"> 1792</label>
+      <label><input type="radio" name="m5q1" value="c"> 1804</label>
+    </div>
+    <div class="question" data-answer="a"
+         data-correction="La Terreur est mise en place par les Montagnards pour défendre une République menacée.">
+      <p>2. Pourquoi la Terreur est-elle mise en place ?</p>
+      <label><input type="radio" name="m5q2" value="a"> Pour défendre la République menacée.</label>
+      <label><input type="radio" name="m5q2" value="b"> Pour rétablir le roi.</label>
+      <label><input type="radio" name="m5q2" value="c"> Pour donner le pouvoir à Napoléon.</label>
+    </div>
+    <div class="question" data-answer="c"
+         data-correction="Le Directoire est instauré par la Constitution de 1795.">
+      <p>3. Quel régime succède à la Terreur en 1795 ?</p>
+      <label><input type="radio" name="m5q3" value="a"> L'Empire</label>
+      <label><input type="radio" name="m5q3" value="b"> La monarchie</label>
+      <label><input type="radio" name="m5q3" value="c"> Le Directoire</label>
+    </div>
+    <div class="question" data-answer="b"
+         data-correction="Napoléon prend le pouvoir par le coup d'État des 18 et 19 brumaire, avec l'intervention de l'armée.">
+      <p>4. Comment Napoléon prend-il le pouvoir en 1799 ?</p>
+      <label><input type="radio" name="m5q4" value="a"> Par succession héréditaire.</label>
+      <label><input type="radio" name="m5q4" value="b"> Par un coup d'État avec l'aide de l'armée.</label>
+      <label><input type="radio" name="m5q4" value="c"> Par une élection présidentielle.</label>
+    </div>
+    <div class="question" data-answer="c"
+         data-correction="Le 2 décembre 1804, Napoléon devient empereur des Français.">
+      <p>5. Que se passe-t-il le 2 décembre 1804 ?</p>
+      <label><input type="radio" name="m5q5" value="a"> La République est proclamée.</label>
+      <label><input type="radio" name="m5q5" value="b"> Robespierre est exécuté.</label>
+      <label><input type="radio" name="m5q5" value="c"> Napoléon devient empereur.</label>
+    </div>
+    <button class="action correction-btn">Terminer mon parcours</button>
+    <div class="quiz-result" aria-live="polite"></div>
+  </div>
+  <div id="certificate" class="highlight hidden"></div>
+</section>
+
+</div>
+</main>
+
+<footer>
+  <strong>MISSION HISTOIRE</strong>
+  <p>De la République à l'Empire · 1792-1804</p>
+  <p>Révisez, observez, comprenez et progressez !</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
